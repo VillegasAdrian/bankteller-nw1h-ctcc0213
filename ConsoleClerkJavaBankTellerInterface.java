@@ -1,3 +1,4 @@
+package ConsoleClerkJavaBankTellerInterface;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
@@ -118,8 +119,8 @@ public class Main {
                 System.out.println("Welcome to the Bank Teller System!");
                 // Perform bank transactions
                 while (true) {
-                    System.out.println("\n1. Deposit");
-                    System.out.println("2. Withdraw");
+                    System.out.println("\n1. Withdraw");
+                    System.out.println("2. Deposit");
                     System.out.println("3. Check Balance");
                     System.out.println("4. Exit");
                     System.out.print("Enter your choice: ");
@@ -128,15 +129,15 @@ public class Main {
 
                     switch (bankChoice) {
                         case 1:
-                            System.out.print("Enter deposit amount: ");
-                            double depositAmount = scanner.nextDouble();
-                            myAccount.deposit(depositAmount);
-                            break;
-
-                        case 2:
                             System.out.print("Enter withdrawal amount: ");
                             double withdrawalAmount = scanner.nextDouble();
                             myAccount.withdraw(withdrawalAmount);
+                            break;
+
+                        case 2:
+                            System.out.print("Enter deposit amount: ");
+                            double depositAmount = scanner.nextDouble();
+                            myAccount.deposit(depositAmount);
                             break;
 
                         case 3:
